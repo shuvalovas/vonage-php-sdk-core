@@ -58,6 +58,7 @@ use Vonage\Verify\ClientFactory as VerifyClientFactory;
 use Vonage\Verify2\ClientFactory as Verify2ClientFactory;
 use Vonage\Verify\Verification;
 use Vonage\Voice\ClientFactory as VoiceClientFactory;
+use Vonage\DLC\ClientFactory as DlcClientFactory;
 use Vonage\Logger\{LoggerAwareInterface, LoggerTrait};
 
 use function array_key_exists;
@@ -91,6 +92,7 @@ use function strpos;
  * @method Verify2\Client  verify2()
  * @method Voice\Client voice()
  * @method Vonage\Video\Client video()
+ * @method DLC\Client dlc()
  *
  * @property string restUrl
  * @property string apiUrl
@@ -229,6 +231,7 @@ class Client implements LoggerAwareInterface
             'verify' => VerifyClientFactory::class,
             'verify2' => Verify2ClientFactory::class,
             'voice' => VoiceClientFactory::class,
+			'dlc' => DlcClientFactory::class,
 
             // Additional utility classes
             APIResource::class => APIResource::class,
